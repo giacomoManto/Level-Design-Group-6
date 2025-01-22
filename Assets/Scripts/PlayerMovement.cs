@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * Time.deltaTime * moveSpeed);
 
         //Debug.Log(grounded);
-        if (Input.GetKeyDown("space") && grounded)
+        if (Input.GetKey("space") && grounded)
         {
             //Debug.Log("JUMPED");
             verticalVelocity += Mathf.Sqrt(jumpHeight * -2.0f * gravity);
