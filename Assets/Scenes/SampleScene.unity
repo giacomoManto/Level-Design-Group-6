@@ -273,6 +273,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &707236677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6862338483493583117, guid: 88930990ebb9ee84eacc6213c953175a, type: 3}
+  m_PrefabInstance: {fileID: 675623983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1026605528
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,11 +630,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1226186531 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2032914060263937947, guid: 88930990ebb9ee84eacc6213c953175a, type: 3}
-  m_PrefabInstance: {fileID: 675623983}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &2137066952
 Mesh:
   m_ObjectHideFlags: 0
@@ -810,7 +810,11 @@ PrefabInstance:
     - target: {fileID: 7019129773206032032, guid: 7f64e38952feb1948bd799ecf5dff7b1, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1226186531}
+      objectReference: {fileID: 707236677}
+    - target: {fileID: 7019129773206032032, guid: 7f64e38952feb1948bd799ecf5dff7b1, type: 3}
+      propertyPath: rotSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8391768281622483147, guid: 7f64e38952feb1948bd799ecf5dff7b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
