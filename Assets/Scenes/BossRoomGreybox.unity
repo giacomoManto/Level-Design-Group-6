@@ -17163,6 +17163,10 @@ PrefabInstance:
       propertyPath: 'brokenTubes.Array.data[7]'
       value: 
       objectReference: {fileID: 1955699358}
+    - target: {fileID: 7408235103008787802, guid: 7f64e38952feb1948bd799ecf5dff7b1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ff8d373497116e429c2c635e28aeb9e, type: 2}
     - target: {fileID: 8391768281622483147, guid: 7f64e38952feb1948bd799ecf5dff7b1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.125
