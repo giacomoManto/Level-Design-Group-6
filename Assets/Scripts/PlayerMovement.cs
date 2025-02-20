@@ -46,11 +46,14 @@ public class PlayerMovement : MonoBehaviour
 
             Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
             Vector3 move = transform.transform.rotation * movement.normalized * moveSpeed;
+            
+            /*
             if (Input.GetKey("space") && onGround)
             {
                 print("hello!");
                 yVelocity = jumpVelocity;
             }
+            */
 
             Vector3 velocity = (move + new Vector3(0, yVelocity, 0)) * Time.deltaTime;
         
