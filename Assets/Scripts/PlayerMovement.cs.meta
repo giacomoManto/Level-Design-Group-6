@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 34b5691d4b320ff4a930e5eb11f63332
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cameraTransform: {instanceID: 0}
+  - controller: {instanceID: 0}
+  - walkSound: {fileID: 8300000, guid: 59a746bc07e8841eba926a5018d9110f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
