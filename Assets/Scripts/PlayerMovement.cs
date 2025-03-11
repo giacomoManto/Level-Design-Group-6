@@ -53,5 +53,18 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity);
         
         yVelocity -= 0.5f * gravity * Time.deltaTime;
+        
+        if (Input.GetKeyDown("left ctrl"))
+        {
+            controller.height = 0.625f;
+            cameraTransform.localPosition.Set(0, -0.625f, 0);
+            transform.Translate(0, -0.5625f, 0);
+        }
+        if (Input.GetKeyUp("left ctrl"))
+        {
+            controller.height = 1.75f;
+            cameraTransform.localPosition.Set(0, 0.75f, 0);
+            transform.Translate(0, 0.5625f, 0);
+        }
     }
 }
