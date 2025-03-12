@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            this.transform.localScale = new Vector3(this.transform.localScale.x, Mathf.Lerp(this.transform.localScale.y, originalScale, 0.1f), this.transform.localScale.z);
+            this.transform.localScale = new Vector3(this.transform.localScale.x, Mathf.Lerp(this.transform.localScale.y, originalScale, 0.05f), this.transform.localScale.z);
             moveSpeed = ogMoveSpeed;
         }
 
