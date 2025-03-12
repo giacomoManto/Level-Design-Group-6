@@ -51,7 +51,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.transform.rotation * movement.normalized * moveSpeed;
         if (Input.GetKey("space") && onGround)
         {
-            print("hello!");
             yVelocity = jumpVelocity;
         }
 
