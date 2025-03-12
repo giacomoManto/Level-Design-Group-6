@@ -15,14 +15,17 @@ public class PlayerMovement : MonoBehaviour
     public float crouchScale;
 
     private float originalScale;
+    private bool crouching = false;
     private bool tryingToStand = false;
 
     private float vertRotation;
+    private float ogMoveSpeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         originalScale = this.transform.localScale.y;
+        ogMoveSpeed = moveSpeed;
     }
 
     // Update is called once per frame
@@ -62,23 +65,31 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetKeyDown("left ctrl"))
         {
-            if (!tryingToStand)
-            {
-                this.transform.transform.localScale = new Vector3(this.transform.transform.localScale.x, crouchScale, this.transform.transform.localScale.z);
-                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - (originalScale - crouchScale), this.transform.position.z);
-            }
+            crouching = true;
             tryingToStand = false;
         }
         if (Input.GetKeyUp("left ctrl"))
         {
             tryingToStand = true;
-
         }
 
-        if (tryingToStand && !Physics.Raycast(this.transform.position, Vector3.up, originalScale - this.transform.localScale.y))
+        if (crouching)
         {
-            this.transform.transform.localScale = new Vector3(this.transform.transform.localScale.x, originalScale, this.transform.transform.localScale.z);
+            
+            this.transform.localScale = new Vector3(this.transform.localScale.x, Mathf.Lerp(this.transform.localScale.y, crouchScale, 0.1f), this.transform.localScale.z);
+            moveSpeed = ogMoveSpeed / 3;
+
+        }
+        else
+        {
+            this.transform.localScale = new Vector3(this.transform.localScale.x, Mathf.Lerp(this.transform.localScale.y, originalScale, 0.05f), this.transform.localScale.z);
+            moveSpeed = ogMoveSpeed;
+        }
+
+        if (crouching && tryingToStand && !Physics.Raycast(this.transform.position, Vector3.up, originalScale - this.transform.localScale.y))
+        {
             tryingToStand = false;
+            crouching = false;
         }
     }
 }
