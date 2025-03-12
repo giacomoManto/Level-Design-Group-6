@@ -11,11 +11,18 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     private float yVelocity;
 
+
+    public float crouchScale;
+
+    private float originalScale;
+    private bool tryingToStand = false;
+
     private float vertRotation;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        originalScale = this.transform.localScale.y;
     }
 
     // Update is called once per frame
@@ -56,15 +63,23 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetKeyDown("left ctrl"))
         {
-            controller.height = 0.625f;
-            cameraTransform.localPosition.Set(0, -0.625f, 0);
-            transform.Translate(0, -0.5625f, 0);
+            if (!tryingToStand)
+            {
+                this.transform.transform.localScale = new Vector3(this.transform.transform.localScale.x, crouchScale, this.transform.transform.localScale.z);
+                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - (originalScale - crouchScale), this.transform.position.z);
+            }
+            tryingToStand = false;
         }
         if (Input.GetKeyUp("left ctrl"))
         {
-            controller.height = 1.75f;
-            cameraTransform.localPosition.Set(0, 0.75f, 0);
-            transform.Translate(0, 0.5625f, 0);
+            tryingToStand = true;
+
+        }
+
+        if (tryingToStand && !Physics.Raycast(this.transform.position, Vector3.up, originalScale - this.transform.localScale.y))
+        {
+            this.transform.transform.localScale = new Vector3(this.transform.transform.localScale.x, originalScale, this.transform.transform.localScale.z);
+            tryingToStand = false;
         }
     }
 }

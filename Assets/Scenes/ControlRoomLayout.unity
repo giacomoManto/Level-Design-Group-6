@@ -4829,6 +4829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5085377084279872837, guid: 96e772f3f75886a4c933bc9cf106e1c7, type: 3}
+      propertyPath: crouchScale
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5910,7 +5914,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1180475737}
+  m_Mesh: {fileID: 1978310735}
 --- !u!33 &1211277155
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -6592,7 +6596,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1453006697}
+  m_Mesh: {fileID: 195494993}
 --- !u!33 &1291008251
 MeshFilter:
   m_ObjectHideFlags: 10
