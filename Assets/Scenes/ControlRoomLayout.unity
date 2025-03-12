@@ -4829,6 +4829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4422259777731380753, guid: 96e772f3f75886a4c933bc9cf106e1c7, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5085377084279872837, guid: 96e772f3f75886a4c933bc9cf106e1c7, type: 3}
       propertyPath: crouchScale
       value: 0.3
