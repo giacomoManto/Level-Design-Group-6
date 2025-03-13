@@ -2711,8 +2711,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 397539596283895188}
+  - component: {fileID: 1967863324942241997}
+  - component: {fileID: 9046937584320346985}
   m_Layer: 0
-  m_Name: Vent Cover
+  m_Name: Vent Cover1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2742,6 +2744,42 @@ Transform:
   - {fileID: 5409981047280019841}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1967863324942241997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9066793848731931494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a03f9b04f68f44afb1332efdea15d7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UI: {fileID: 3512049580933418316}
+  Vent: {fileID: 9066793848731931494}
+  newPos: {x: 0, y: 0, z: 0}
+--- !u!65 &9046937584320346985
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9066793848731931494}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3858155724379378674
 PrefabInstance:
   m_ObjectHideFlags: 0
