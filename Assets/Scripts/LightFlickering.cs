@@ -24,8 +24,11 @@ public class LightFlickering : MonoBehaviour
 
             if (active)
             {
-                timer = Random.Range(0.5f, 4.0f);
-                timer = 
+                timer = Random.Range(0.5f, 8.0f);
+            }
+            else
+            {
+                timer = Random.Range(0.01f, 0.25f);
             }
         }
     }

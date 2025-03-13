@@ -15,12 +15,12 @@ public class OpenVent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(UI,activeSelf)
+        if(UI.activeSelf)
         {
-            if(input.GetKeyDown(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.E))
             {
-                Box.SetActive(false);
-                OpenVent();
+                Vent.SetActive(false);
+                Open();
             }
         }
     }
@@ -41,7 +41,7 @@ public class OpenVent : MonoBehaviour
         }
     }
 
-    void OpenVent()
+    void Open()
     {
         
     }
