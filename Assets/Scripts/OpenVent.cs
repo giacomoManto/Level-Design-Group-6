@@ -10,7 +10,7 @@ public class OpenVent : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        newPos = new Vector3(this.transform.position.x, this.transform.position.y - 0.7f, this.transform.position.z + 0.5f);
+        newPos = new Vector3(this.transform.position.x, this.transform.position.y - 0.65f, this.transform.position.z + 0.5f);
         UI.SetActive(false);
     }
 
