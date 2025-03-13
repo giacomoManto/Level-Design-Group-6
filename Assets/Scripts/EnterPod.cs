@@ -54,6 +54,7 @@ public class EnterPod : MonoBehaviour
     void WinGame()
     {
         isPlaying = false;
+        PlayerMovement.setIsPlaying();
         UI.SetActive(false);
         WinUI.SetActive(true);
         Invoke("LoadScene", 3);

@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float vertRotation;
     private float ogMoveSpeed;
-    public bool isPlaying;
+    static bool isPlaying;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -98,8 +98,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void setIsPlaying()
+    public static void setIsPlaying()
     {
-        isPlaying = !isPlaying;
+        isPlaying = false;
     }
 }
