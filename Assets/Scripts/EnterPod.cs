@@ -7,11 +7,8 @@ public class EnterPod : MonoBehaviour
 {
     public GameObject UI;
 
-    public GameObject WinUI;
-
     public GameObject Player;
-
-    public Vector3 PlayerPos;
+    public GameObject Pod;
     
     bool isPlaying;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -56,7 +53,7 @@ public class EnterPod : MonoBehaviour
         isPlaying = false;
         PlayerMovement.setIsPlaying();
         UI.SetActive(false);
-        WinUI.SetActive(true);
+        Player.transform.position = Pod.transform.position;
         Invoke("LoadScene", 3);
     }
 
