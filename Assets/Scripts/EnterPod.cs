@@ -5,55 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class EnterPod : MonoBehaviour
 {
-    public GameObject UI;
-
     public GameObject Player;
     public GameObject Pod;
-    
-    bool isPlaying;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        isPlaying = true;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(isPlaying)
-        {
-            if(UI.activeSelf)
-            {
-                if(Input.GetKeyDown(KeyCode.E))
-                {
-                    WinGame();
-                }
-            }
-        }
-    }
 
     void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-            UI.SetActive(true);
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if(other.CompareTag("Player"))
-        {
-            UI.SetActive(false);
+            WinGame();
         }
     }
 
     void WinGame()
     {
-        isPlaying = false;
         PlayerMovement.setIsPlaying();
-        UI.SetActive(false);
         Player.transform.position = Pod.transform.position;
+        Player.transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
         Invoke("LoadScene", 3);
     }
 
