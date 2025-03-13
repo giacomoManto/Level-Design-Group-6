@@ -6,9 +6,11 @@ public class OpenVent : MonoBehaviour
 {
     public GameObject UI;
     public GameObject Vent;
+    public Vector3 newPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        newPos = new Vector3(this.transform.position.x, this.transform.position.y - 0.7f, this.transform.position.z + 0.5f);
         UI.SetActive(false);
     }
 
@@ -19,8 +21,7 @@ public class OpenVent : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                Vent.SetActive(false);
-                Open();
+                OpenTheVent();
             }
         }
     }
@@ -41,8 +42,9 @@ public class OpenVent : MonoBehaviour
         }
     }
 
-    void Open()
+    void OpenTheVent()
     {
-        
+        GameObject.Destroy(Vent);
+        Instantiate(Vent, newPos, Quaternion.Euler(-90f, 0f, 0f));
     }
 }
