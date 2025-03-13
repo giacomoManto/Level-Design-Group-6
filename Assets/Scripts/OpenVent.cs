@@ -45,6 +45,10 @@ public class OpenVent : MonoBehaviour
     void OpenTheVent()
     {
         GameObject.Destroy(Vent);
-        Instantiate(Vent, newPos, Quaternion.Euler(-90f, 0f, 0f));
+        GameObject newVent = Instantiate(Vent, this.transform.position, this.transform.rotation);
+        newVent.transform.Translate(Vector3.back * 0.65f);
+        newVent.transform.Translate(Vector3.down * 0.7f);
+        newVent.transform.Rotate(Vector3.right, 90f);
+        
     }
 }
