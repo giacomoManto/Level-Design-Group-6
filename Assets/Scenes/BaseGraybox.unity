@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 264531889}
   - component: {fileID: 264531888}
   m_Layer: 0
-  m_Name: Cube (9)
+  m_Name: Bookshelf3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383,7 +383,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1637764287}
+  m_Mesh: {fileID: 423974167}
 --- !u!33 &264531889
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -708,7 +708,7 @@ GameObject:
   - component: {fileID: 319478869}
   - component: {fileID: 319478868}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: Bookshelf2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,7 +735,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1059020938}
+  m_Mesh: {fileID: 1637764287}
 --- !u!33 &319478869
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -1929,7 +1929,7 @@ GameObject:
   - component: {fileID: 522792200}
   - component: {fileID: 522792199}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2611,7 +2611,7 @@ GameObject:
   - component: {fileID: 754395236}
   - component: {fileID: 754395235}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: Bookshelf1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4162,7 +4162,7 @@ GameObject:
   - component: {fileID: 1314311871}
   - component: {fileID: 1314311870}
   m_Layer: 0
-  m_Name: Cube (10)
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4827,7 +4827,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 587225728}
+  m_Mesh: {fileID: 1619580716}
 --- !u!33 &1575842029
 MeshFilter:
   m_ObjectHideFlags: 10
