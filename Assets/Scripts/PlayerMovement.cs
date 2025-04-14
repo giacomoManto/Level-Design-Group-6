@@ -9,13 +9,16 @@ public class PlayerMovement : MonoBehaviour
     public float jumpVelocity;
     public float gravity;
     public CharacterController controller;
+    public GameObject flashlight;
     private float yVelocity;
+    private bool flashlightEnabled;
 
     private float vertRotation;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        flashlightEnabled = false;
     }
 
     // Update is called once per frame
@@ -46,6 +49,12 @@ public class PlayerMovement : MonoBehaviour
         {
             print("hello!");
             yVelocity = jumpVelocity;
+        }
+
+        if (Input.GetKeyDown("f"))
+        {
+            flashlightEnabled = !flashlightEnabled;
+            flashlight.SetActive(flashlightEnabled);
         }
 
         Vector3 velocity = (move + new Vector3(0, yVelocity, 0)) * Time.deltaTime;

@@ -3,7 +3,27 @@ guid: dcad81bd49b6f5e4b8434ed23b9710f1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Back_base
+    second: {fileID: 2100000, guid: 557f854c9b601d34a92e3ffe30f7d4a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stand
+    second: {fileID: 2100000, guid: 557f854c9b601d34a92e3ffe30f7d4a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stand_base
+    second: {fileID: 2100000, guid: 8fcea5eb052293045a785f2dbba0e3a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: monitor
+    second: {fileID: 2100000, guid: b36d631ac67c18148a6d84b4aec7d510, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
